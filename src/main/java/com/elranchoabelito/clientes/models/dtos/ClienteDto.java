@@ -1,33 +1,41 @@
 package com.elranchoabelito.clientes.models.dtos;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+
+import java.util.Date;
 
 
 @AllArgsConstructor
 @Data
-
 public class ClienteDto {
-    private String clienteId;
+
     private String nombre;
     private String apellido;
     private String telefono;
     private String email;
-    private String dni;
+    private String documento;
     private String direccion;
+    private Long cuentaId;
+    private Date fechaNacimiento;
 
     public ClienteDto() {
     }
 
-    public String getClienteId() {
-        return clienteId;
+    public Date getFechaNacimiento() {
+        return fechaNacimiento;
     }
 
-    public void setClienteId(String clienteId) {
-        this.clienteId = clienteId;
+    public void setFechaNacimiento(Date fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public Long getCuentaId() {
+        return cuentaId;
+    }
+
+    public void setCuentaId(Long cuentaId) {
+        this.cuentaId = cuentaId;
     }
 
     public String getNombre() {
@@ -62,12 +70,12 @@ public class ClienteDto {
         this.email = email;
     }
 
-    public String getDni() {
-        return dni;
+    public String getDocumento() {
+        return documento;
     }
 
-    public void setDni(String dni) {
-        this.dni = dni;
+    public void setDocumento(String documento) {
+        this.documento = documento;
     }
 
     public String getDireccion() {

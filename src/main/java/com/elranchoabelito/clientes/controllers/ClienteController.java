@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/cliente")
 public class ClienteController {
+
     @Autowired
     ClienteSevice clienteSevice;
 
@@ -26,4 +27,5 @@ public class ClienteController {
         Cliente cliente = clienteSevice.registerClient(clienteDto);
         return ResponseEntity.ok(cliente);
     }
+
 }
